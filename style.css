@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.header {
+  display: grid;
+  grid-column: 100px auto 100px;
+  padding: 20px;
+  font-family: "DM Sans", sans-serif;
+  background-color: cadetblue;
+}
+
+.headertext {
+  color: whitesmoke;
+  grid-column: 2;
+  font-size: 20pt;
+}
+
+table {
+  margin: auto;
+  margin-top: 40px;
+}
+
+.noBricka {
+  background-color: #b48d51;
+}
+
+td {
+  background-color: #502900;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+.Black_Bricka {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  background-color: black;
+  border-radius: 55px;
+}
+
+.Red_Bricka {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  background-color: #e62020;
+  border-radius: 55px;
+}

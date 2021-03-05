@@ -70,6 +70,14 @@ td {
   border-radius: 55px;
 }
 
+.Red_Bricka_Dam {
+  background-color: #900603;
+}
+
+.Black_Bricka_Dam {
+  background-color: #2832c2;
+}
+
 .LetYouKnow {
   display: grid;
   grid-template-columns: 100px 1fr 1fr 1fr 100px;

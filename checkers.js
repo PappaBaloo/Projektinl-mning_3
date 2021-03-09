@@ -20,6 +20,7 @@ const VirtualBräda = [
 
 let PickedPiece = {
     idPickedPiece = -1
+    Dam = false
 }
 
 function turnfunctions() {

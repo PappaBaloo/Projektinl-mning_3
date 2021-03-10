@@ -5,13 +5,14 @@ const tablecells = document.querySelectorAll("td");
 let RedScore = 12;
 let RedTurn = true;
 let BlackScore = 12;
+let collectedPieces;
 
 const VirtualBräda = [
     null, 0, null, 1, null, 2, null, 3, 
     null, 4, null, 5, null, 6, null, 7,
     null, 8, null, 9, null, 10, null, 11
-    , null, , null, , null, , null, 
-    , null, , null, , null, , null, 
+    , null, , null, , null, , null, null, null,
+    , null, , null, , null, , null, null, null,
     12, null, 13, null, 14, null, 15
     , null, 16, null, 17, null, 18
     , null, 19, null, 20, null, 21
@@ -19,8 +20,17 @@ const VirtualBräda = [
 ];
 
 let PickedPiece = {
-    idPickedPiece = -1
-    Dam = false
+    idPickedPiece: -1,
+    indexOfPiece: -1,
+    IsDam: false,
+    SpaceSeven: false,
+    SpaceNine: false,
+    Space14: false,
+    Space18: false,
+    SpaceMinus7:false,
+    SpaceMinus9: false,
+    SpaceMinus14: false,
+    SpaceMinus18: false,
 }
 
 function turnfunctions() {
@@ -43,3 +53,39 @@ function getPieceEventListener(){
        BlackBräda[i].addEventListener("click", turnfunctions)
     }
 }
+
+function removeSelectonclick() {
+    for (let i = 0; i < tablecells.length; i++) {
+        
+        tablecells[i].removeAttribute("onclick");
+        
+    }
+}
+
+function isPieceDam() {
+    if(document.getElementById(PickedPiece.idPickedPiece).classList.contains(""))
+}
+
+function resetPiecePropt() {
+    PickedPiece.idPickedPiece = -1;
+    PickedPiece.idPickedPiece = -1;
+    PickedPiece.IsDam = false;
+    PickedPiece.SpaceSeven = false;
+    PickedPiece.SpaceNine = false;
+    PickedPiece.Space14 = false;
+    PickedPiece.Space18 = false;
+    PickedPiece.SpaceMinus7 = false;
+    PickedPiece.SpaceMinus9 = false;
+    PickedPiece.SpaceMinus14 = false;
+    PickedPiece.SpaceMinus18 = false;
+}
+
+function GiveandResetBorders() {
+    for (let i = 0; i < collectedPieces.length; i++) {
+        
+        collectedPieces[i].style.border = "2px solid green"
+        
+    }
+    resetPiecePropt();
+}
+

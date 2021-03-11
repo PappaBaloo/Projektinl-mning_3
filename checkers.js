@@ -19,6 +19,8 @@ const VirtualBräda = [
     , null, 22, null, 23, null, 
 ];
 
+//hello
+
 let PickedPiece = {
     idPickedPiece: -1,
     indexOfPiece: -1,

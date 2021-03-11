@@ -65,7 +65,43 @@ function removeSelectonclick() {
 }
 
 function isPieceDam() {
-    if(document.getElementById(PickedPiece.idPickedPiece).classList.contains(""))
+    if(document.getElementById(PickedPiece.idPickedPiece).classList.contains("Dam")){
+        PickedPiece.IsDam = true;
+    }
+    else {
+        PickedPiece.IsDam = false;
+    }
+
+    getfreeSpaces();
+}
+
+function getfreeSpaces() {
+    if (VirtualBräda[PickedPiece.indexOfPiece + 7] === null && tablecells[PickedPiece.indexOfPiece + 7].classList.contains("noBricka") !== true) {
+        PickedPiece.SpaceSeven = true;
+    }
+
+    if (VirtualBräda[PickedPiece.indexOfPiece + 9] === null && tablecells[PickedPiece.indexOfPiece + 9].classList.contains("noBricka") !== true) {
+        PickedPiece.SpaceNine = true;
+    }
+
+    if (VirtualBräda[PickedPiece.indexOfPiece - 7] === null && tablecells[PickedPiece.indexOfPiece - 7].classList.contains("noBricka") !== true) {
+        PickedPiece.SpaceMinus7 = true;
+    }
+
+    if (VirtualBräda[PickedPiece.indexOfPiece - 9] === null && tablecells[PickedPiece.indexOfPiece - 9].classList.contains("noBricka") !== true) {
+        PickedPiece.SpaceMinus9 = true;
+    }
+}
+
+function piecefinder() {
+    let parsed = parseInt(PickedPiece);
+    return VirtualBräda.indexOf(parsed);
+}
+
+function getPickedPiece() {
+    PickedPiece.idPickedPiece = parseInt(event.target.id);
+    PickedPiece.indexOfPiece = piecefinder(parsed);
+    isPieceDam();
 }
 
 function resetPiecePropt() {

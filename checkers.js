@@ -126,4 +126,3 @@ function GiveandResetBorders() {
     }
     resetPiecePropt();
 }
-

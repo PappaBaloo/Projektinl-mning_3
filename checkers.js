@@ -126,3 +126,13 @@ function GiveandResetBorders() {
     }
     resetPiecePropt();
 }
+
+function GetFreeJumpSpace() {
+    if (turn)
+    {
+        if (VirtualBräda[PickedPiece.indexOfPiece + 14] === null && cells)
+        {
+
+        }
+    }
+}
